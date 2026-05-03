@@ -157,22 +157,7 @@
         image: 'assets/journal-3.avif',
         href: 'journal-detail.html#filmmaker-programmer'
       },
-      {
-        slug: 'internship-thinking',
-        category: 'Career',
-        title: 'How I think about internships as a first-year student',
-        footerTitle: 'Internship Thinking',
-        image: 'assets/journal-1.avif',
-        href: 'journal-detail.html#internship-thinking'
-      },
-      {
-        slug: 'vanilla-js-defense',
-        category: 'Tech',
-        title: "Building without frameworks - a beginner's defense of vanilla JS",
-        footerTitle: 'Vanilla JS Defense',
-        image: 'assets/journal-2.avif',
-        href: 'journal-detail.html#vanilla-js-defense'
-      }
+
     ],
     services: [
       {
@@ -209,7 +194,7 @@
     roles: [
       {
         name: 'Raj Gupta',
-        role: 'Computer Engineer & MBA Student',
+        role: 'Student',
         image: 'assets/hero-home.png'
       },
       {
@@ -220,13 +205,9 @@
       {
         name: 'GDG Member',
         role: 'Creative Team - MPSTME',
-        image: 'assets/project-1.avif'
+        image: 'assets/gdg1.jpg'
       },
-      {
-        name: 'RAW Vision',
-        role: 'Cinematographer',
-        image: 'assets/project-2.avif'
-      }
+
     ],
     certifications: {
       rowOne: [

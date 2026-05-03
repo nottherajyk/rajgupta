@@ -7,7 +7,7 @@
 }
 
 .about-visual-band img {
-  width: 100%;
+  width: 40%;
   max-height: 70vh;
   object-fit: cover;
 }
