@@ -1,6 +1,6 @@
-# Raj Gupta | Portfolio
+My Portfolio website 
 
-A personal portfolio website showcasing my work across code, AI, cinematography, and creative technology. This site serves as a central hub for my projects, journal entries, and a way to get in touch.
+
 
 ## 🚀 Features
 
