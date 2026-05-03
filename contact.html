@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -56,6 +56,12 @@
         <div class="contact-layout">
           <div class="contact-form-shell">
             <form id="contact-form" class="contact-form" novalidate>
+              <!-- Web3Forms configuration -->
+              <input type="hidden" name="access_key" value="e984b5ff-5df6-44b9-a8e6-0bac63797469">
+              <input type="hidden" name="subject" value="New Contact from Portfolio">
+              <input type="hidden" name="from_name" value="Portfolio Contact Form">
+              <!-- Honeypot spam protection - bots fill this, humans don't see it -->
+              <input type="checkbox" name="botcheck" class="hidden" style="display:none">
               <div class="contact-grid">
                 <label class="field-group">
                   <span class="field-label">First Name</span>

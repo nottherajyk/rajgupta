@@ -85,7 +85,6 @@
     submitBtn.disabled = true;
 
     const formData = new FormData(form);
-    formData.append('access_key', 'e984b5ff-5df6-44b9-a8e6-0bac63797469');
 
     fetch('https://api.web3forms.com/submit', {
       method: 'POST',

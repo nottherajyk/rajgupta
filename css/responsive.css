@@ -163,4 +163,9 @@
     font-size: 15px;
     opacity: 0.8;
   }
+
+  /* Keep face visible on mobile instead of cropping to the side */
+  .hero-bg img {
+    object-position: center top;
+  }
 }
