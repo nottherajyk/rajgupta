@@ -166,6 +166,6 @@
 
   /* Keep face visible on mobile instead of cropping to the side */
   .hero-bg img {
-    object-position: center top;
+    object-position: 70% top;
   }
 }
