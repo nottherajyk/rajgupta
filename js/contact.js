@@ -1,4 +1,4 @@
-﻿/**
+/**
  * contact.js
  * Validates the contact form, displays inline errors, and swaps in a success state after valid submission.
  */
@@ -79,7 +79,35 @@
       return;
     }
 
-    showSuccess();
+    const submitBtn = form.querySelector('.contact-submit');
+    const originalBtnText = submitBtn.textContent;
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
+
+    const formData = new FormData(form);
+    formData.append('access_key', 'e984b5ff-5df6-44b9-a8e6-0bac63797469');
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.json().then(json => ({ status: response.status, json })))
+    .then(({ status, json }) => {
+      if (status === 200) {
+        showSuccess();
+      } else {
+        console.log(json);
+        feedback.textContent = json.message || 'Something went wrong. Please try again.';
+      }
+    })
+    .catch(error => {
+      console.log(error);
+      feedback.textContent = 'Something went wrong. Please try again.';
+    })
+    .finally(() => {
+      submitBtn.textContent = originalBtnText;
+      submitBtn.disabled = false;
+    });
   }
 
   function init() {
