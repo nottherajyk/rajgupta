@@ -1,0 +1,237 @@
+﻿/* ============ SECTIONS.CSS ============ */
+
+/* --- Homepage Projects Strip --- */
+.projects-strip {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 8px var(--container-x) 0;
+  scroll-snap-type: x mandatory;
+  cursor: grab;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.projects-strip::-webkit-scrollbar {
+  display: none;
+}
+
+.projects-strip.dragging {
+  cursor: grabbing;
+}
+
+.project-preview-card {
+  position: relative;
+  min-width: 320px;
+  height: 460px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  isolation: isolate;
+}
+
+.project-preview-card__media,
+.project-preview-card__media img {
+  width: 100%;
+  height: 100%;
+}
+
+.project-preview-card__media img {
+  object-fit: cover;
+  transition: transform 0.6s var(--ease-smooth);
+}
+
+.project-preview-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.82) 0%, rgba(0, 0, 0, 0) 58%);
+}
+
+.project-preview-card:hover .project-preview-card__media img,
+.project-preview-card:focus-within .project-preview-card__media img {
+  transform: scale(1.03);
+}
+
+.project-preview-card__content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: grid;
+  gap: 10px;
+  padding: 24px;
+}
+
+.project-preview-card__title {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-style: italic;
+  line-height: 1.05;
+}
+
+.project-preview-card__cta {
+  justify-self: end;
+  opacity: 0;
+  transition: opacity var(--duration-base) ease;
+}
+
+.project-preview-card:hover .project-preview-card__cta,
+.project-preview-card:focus-within .project-preview-card__cta {
+  opacity: 1;
+}
+
+/* --- Homepage About Split --- */
+.about-preview {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  align-items: stretch;
+  gap: 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.about-preview__media {
+  min-height: 640px;
+}
+
+.about-preview__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-preview__content {
+  display: grid;
+  align-content: center;
+  gap: 24px;
+  padding: clamp(32px, 5vw, 48px);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0));
+}
+
+.stats-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  padding-top: 12px;
+}
+
+.stat-inline {
+  display: grid;
+  gap: 4px;
+}
+
+.stat-inline__number,
+.milestone-number,
+.metric-number {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 5vw, 60px);
+  font-style: italic;
+  line-height: 1;
+}
+
+.stat-inline__label,
+.milestone-label,
+.metric-label {
+  color: var(--color-text-muted);
+  font-size: var(--text-label);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+/* --- Skills Accordion --- */
+.accordion {
+  border-top: 1px solid var(--color-border);
+}
+
+.accordion-row {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.accordion-toggle {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr) 44px;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 0;
+  text-align: left;
+}
+
+.accordion-number {
+  color: var(--color-text-muted);
+  font-size: var(--text-label);
+  letter-spacing: 0.16em;
+}
+
+.accordion-title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 48px);
+  font-style: italic;
+  line-height: 1.02;
+}
+
+.accordion-icon {
+  justify-self: end;
+  font-size: 32px;
+  line-height: 1;
+  transition: transform var(--duration-base) var(--ease-out);
+}
+
+.accordion-row.open .accordion-icon {
+  transform: rotate(45deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s var(--ease-smooth);
+}
+
+.accordion-content__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 160px;
+  gap: 28px;
+  padding: 0 0 26px 52px;
+}
+
+.accordion-copy {
+  color: var(--color-text-muted);
+  max-width: 36rem;
+}
+
+.accordion-visual {
+  width: 160px;
+  height: 200px;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.accordion-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- Milestones --- */
+.milestones-band {
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.milestones-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.milestone-item {
+  padding: clamp(28px, 4vw, 48px) 0;
+  text-align: center;
+}
+
+.milestone-number {
+  font-size: clamp(64px, 10vw, 120px);
+}

@@ -1,0 +1,91 @@
+/* ============ FOOTER.CSS ============ */
+
+/* --- Footer Layout --- */
+.site-footer {
+  position: relative;
+  overflow: clip;
+  padding: var(--section-y-tight) 0 28px;
+  border-top: 1px solid var(--color-border);
+}
+
+.footer-watermark {
+  position: absolute;
+  left: 50%;
+  bottom: -12px;
+  transform: translateX(-50%);
+  font-family: var(--font-display);
+  font-size: var(--footer-watermark);
+  font-style: italic;
+  line-height: 1;
+  opacity: 0.04;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+}
+
+.footer-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) repeat(4, minmax(0, 0.7fr));
+  gap: 24px;
+}
+
+.footer-feature {
+  display: grid;
+  gap: 18px;
+}
+
+.footer-email {
+  display: inline-block;
+  width: fit-content;
+  max-width: 100%;
+  word-break: break-all;
+  font-family: var(--font-display);
+  font-size: var(--text-h3);
+  font-style: italic;
+  line-height: 1.05;
+}
+
+.footer-feature p {
+  max-width: 26rem;
+  color: var(--color-text-muted);
+}
+
+.footer-column {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+}
+
+.footer-heading {
+  color: var(--color-text-muted);
+  font-size: var(--text-label);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.footer-links {
+  display: grid;
+  gap: 10px;
+}
+
+.footer-link,
+.inline-link {
+  position: relative;
+  width: fit-content;
+}
+
+.footer-bottom {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 22px;
+  margin-top: 42px;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: var(--text-small);
+}
+

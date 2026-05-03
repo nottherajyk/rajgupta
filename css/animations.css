@@ -1,0 +1,95 @@
+﻿/* ============ ANIMATIONS.CSS ============ */
+
+/* --- Scroll Reveal --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(48px);
+  transition:
+    opacity 0.8s var(--ease-out),
+    transform 0.8s var(--ease-out);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-stagger > * {
+  transition:
+    opacity 0.8s var(--ease-out),
+    transform 0.8s var(--ease-out);
+}
+
+/* --- Shared Keyframes --- */
+@keyframes scrollBounce {
+  0%,
+  100% {
+    transform: rotate(45deg) translate(0, 0);
+  }
+
+  50% {
+    transform: rotate(45deg) translate(4px, 4px);
+  }
+}
+
+@keyframes shimmerPulse {
+  0% {
+    transform: translateX(-110%) skewX(-18deg);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0.38;
+  }
+
+  100% {
+    transform: translateX(160%) skewX(-18deg);
+    opacity: 0;
+  }
+}
+
+@keyframes marqueeLeft {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marqueeRight {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* --- Page Transition Overlay --- */
+#pt-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-transition);
+  background: var(--color-bg);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: none;
+  transition:
+    opacity 0.6s ease,
+    visibility 0.6s ease;
+}
+
+#pt-overlay.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#pt-overlay.is-active {
+  opacity: 1;
+  visibility: visible;
+  transition-duration: 0.35s;
+}

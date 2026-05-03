@@ -1,0 +1,134 @@
+﻿/* ============ CONTACT.CSS ============ */
+
+/* --- Contact Section --- */
+.contact-panel {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+}
+
+.contact-panel__media,
+.contact-panel__overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.contact-panel__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact-panel__overlay {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.contact-layout {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  align-items: center;
+  min-height: 780px;
+  padding: clamp(48px, 6vw, 72px);
+}
+
+.contact-form-shell {
+  width: min(560px, 100%);
+  margin-inline: auto;
+  padding: clamp(28px, 4vw, 40px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(10, 10, 10, 0.42);
+  backdrop-filter: blur(12px);
+}
+
+.contact-form {
+  display: grid;
+  gap: 24px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 24px;
+}
+
+.field-group {
+  display: grid;
+  gap: 10px;
+}
+
+.field-group[data-span="full"] {
+  grid-column: 1 / -1;
+}
+
+.field-label {
+  color: var(--color-text-muted);
+  font-size: var(--text-label);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.field-input,
+.field-textarea {
+  width: 100%;
+  padding: 0 0 12px;
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  background: transparent;
+  color: var(--color-text);
+  outline: 0;
+}
+
+.field-input::placeholder,
+.field-textarea::placeholder {
+  color: rgba(242, 237, 228, 0.36);
+}
+
+.field-input:focus,
+.field-textarea:focus {
+  border-bottom-color: var(--color-text);
+}
+
+.field-group.is-error .field-input,
+.field-group.is-error .field-textarea {
+  border-bottom-color: #ff8f8f;
+}
+
+.form-feedback {
+  min-height: 24px;
+  color: #ffb6b6;
+  font-size: var(--text-small);
+}
+
+.contact-submit {
+  width: fit-content;
+  padding: 14px 40px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.contact-submit:hover,
+.contact-submit:focus-visible {
+  background: var(--color-text);
+  color: var(--color-bg);
+}
+
+.contact-success {
+  display: none;
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4vw, 48px);
+  font-style: italic;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.contact-success.is-visible {
+  display: block;
+}
+
+.connected-block {
+  display: grid;
+  gap: 14px;
+  justify-items: start;
+}

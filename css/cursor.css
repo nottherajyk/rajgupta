@@ -1,0 +1,80 @@
+/* ============ CURSOR.CSS ============ */
+
+/* --- Custom Cursor --- */
+@media (hover: hover) {
+  html,
+  body {
+    cursor: none;
+  }
+
+  /* Ensure interactive elements also hide the default cursor */
+  a,
+  button,
+  label,
+  input,
+  textarea,
+  [role="button"] {
+    cursor: none;
+  }
+}
+
+.cursor-dot,
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+  z-index: var(--z-cursor);
+}
+
+.cursor-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-text);
+  transform: translate(-50%, -50%);
+  transition:
+    opacity 0.2s ease,
+    transform 0.1s ease;
+}
+
+.cursor-ring {
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid var(--color-text);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.6;
+  transition:
+    width var(--duration-base) var(--ease-out),
+    height var(--duration-base) var(--ease-out),
+    opacity var(--duration-fast) ease;
+}
+
+body.cursor-hover .cursor-dot {
+  opacity: 0;
+}
+
+body.cursor-hover .cursor-ring {
+  width: 60px;
+  height: 60px;
+  opacity: 0.85;
+}
+
+@media (hover: none) {
+  html,
+  body,
+  a,
+  button,
+  label,
+  input,
+  textarea {
+    cursor: auto;
+  }
+
+  .cursor-dot,
+  .cursor-ring {
+    display: none;
+  }
+}

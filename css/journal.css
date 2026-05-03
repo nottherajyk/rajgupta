@@ -1,0 +1,117 @@
+﻿/* ============ JOURNAL.CSS ============ */
+
+/* --- Journal Cards --- */
+.journal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.journal-card {
+  display: grid;
+  gap: 16px;
+  transform: translateY(0);
+}
+
+.journal-card__media {
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  aspect-ratio: 16 / 10;
+}
+
+.journal-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease;
+}
+
+.journal-card__title {
+  position: relative;
+  width: fit-content;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.journal-card__title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform var(--duration-base) var(--ease-smooth);
+}
+
+.journal-card:hover,
+.journal-card:focus-within {
+  transform: translateY(-6px);
+}
+
+.journal-card:hover .journal-card__media img,
+.journal-card:focus-within .journal-card__media img {
+  transform: scale(1.02);
+  filter: brightness(0.85);
+}
+
+.journal-card:hover .journal-card__title::after,
+.journal-card:focus-within .journal-card__title::after {
+  transform: scaleX(1);
+}
+
+/* --- Journal Detail --- */
+.article-hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 18px;
+  color: var(--color-text-muted);
+  font-size: var(--text-small);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.article-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(240px, 0.55fr);
+  gap: clamp(28px, 5vw, 72px);
+}
+
+.article-body {
+  display: grid;
+  gap: 22px;
+}
+
+.article-body h2 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 40px);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1;
+  margin-top: 12px;
+}
+
+.article-body p,
+.article-body li {
+  color: var(--color-text-muted);
+}
+
+.article-quote {
+  padding: 28px;
+  border-left: 2px solid var(--color-accent-soft);
+  background: rgba(255, 255, 255, 0.02);
+  font-family: var(--font-display);
+  font-size: clamp(24px, 3vw, 34px);
+  font-style: italic;
+  line-height: 1.2;
+}
+
+.article-aside {
+  display: grid;
+  gap: 18px;
+  align-content: start;
+}
