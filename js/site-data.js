@@ -16,7 +16,8 @@
       { label: 'About', href: 'about.html', page: 'about' },
       { label: 'Projects', href: 'projects.html', page: 'projects' },
       { label: 'Journal', href: 'journal.html', page: 'journal' },
-      { label: 'Contact', href: 'contact.html', page: 'contact' }
+      { label: 'Contact', href: 'contact.html', page: 'contact' },
+      { label: 'Links', href: 'links.html', page: 'links' }
     ],
     socials: [
       { label: 'GitHub', href: 'https://github.com/jeeka1469' },

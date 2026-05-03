@@ -29,23 +29,6 @@ My Portfolio website
 * `js/`: JavaScript files for interactivity and dynamic data loading (`site-data.js`).
 * `assets/`: Images and visual assets for the site.
 
-## 💻 Running Locally
-
-Since this is a static website, running it locally is straightforward:
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/nottherajyk/rajgupta.git
-   ```
-2. Navigate into the project directory:
-   ```bash
-   cd rajgupta
-   ```
-3. Open `index.html` directly in your browser, or use a local development server for the best experience:
-   * Using VS Code: Install the **Live Server** extension and click "Go Live".
-   * Using Python: Run `python -m http.server 8000` and visit `http://localhost:8000`.
-   * Using Node.js: Run `npx http-server` and visit the provided localhost URL.
-
 ## 📬 Contact
 
 * **Email:** rajgupta.yk@gmail.com
