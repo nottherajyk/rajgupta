@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Journal Detail | Raj Gupta</title>
+  <meta name="description" content="Journal entry by Raj Gupta on learning through AI certifications.">
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="assets/icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/projects.css">
+  <link rel="stylesheet" href="css/journal.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/cursor.css">
+  <link rel="stylesheet" href="css/responsive.css"></head>
+<body data-page="journal">
+  <div id="pt-overlay"></div>
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+  <header class="site-header" data-site-nav></header>
+  <main>
+    <section id="journal-detail-hero" class="hero hero--short">
+      <div class="hero-bg">
+        <!-- EDIT ME: replace src with your journal detail hero image -->
+        <img src="assets/journal-2.avif" alt="SnapTools Retrospective hero" data-parallax-speed="0.35">
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content reveal">
+        <div class="article-hero-meta">
+          <span>Building</span>
+          <span>Journal</span>
+          <span>2026</span>
+        </div>
+        <h1 class="hero-title hero-title--page">Why I built SnapTools and what I'd do differently</h1>
+        <p class="hero-body">A retrospective on building SnapTools V1. Reflecting on architecture decisions, UI/UX tradeoffs, and the lessons learned shipping a robust utility web application.</p>
+      </div>
+    </section>
+
+    <section id="journal-detail" class="section">
+      <div class="container article-layout">
+        <article class="article-body reveal">
+          <p>SnapTools was born out of frustration. I found myself constantly switching between ten different websites just to format JSON, encode URLs, or compress images. Building a single, unified web app for these tasks seemed like the obvious solution.</p>
+          <h2>Architecture Decisions</h2>
+          <p>I decided to keep the architecture as simple as possible. No heavy frameworks initially, just pure JavaScript utility functions. This allowed the app to be blazingly fast and fully offline-capable once cached.</p>
+          <h2>What changed</h2>
+          <p>As the toolset grew, maintaining individual scripts became challenging. I learned the value of a modular component system and strict separation of concerns, even in a "simple" utility app.</p>
+          <blockquote class="article-quote">Good tools get out of the user's way. The interface should disappear, leaving only the functionality.</blockquote>
+          <h2>What I would do differently</h2>
+          <p>If I were to rebuild SnapTools today, I would invest earlier in a robust testing suite for the core utility functions. Edge cases in user input are endless, and catching them manually is unsustainable.</p>
+        </article>
+        <aside class="article-aside reveal">
+          <section class="project-detail__panel surface-card">
+            <h3>Quick Notes</h3>
+            <div class="project-detail__list muted">
+              <p>Solve your own problems first.</p>
+              <p>Performance is a feature.</p>
+              <p>Modularity saves time.</p>
+            </div>
+          </section>
+          <section class="project-detail__panel surface-card">
+            <h3>Next Reads</h3>
+            <div class="project-detail__list">
+              <a class="inline-link" href="journal.html" data-transition="true">Back to Journal</a>
+              <a class="inline-link" href="contact.html" data-transition="true">Connect</a>
+            </div>
+          </section>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer" data-site-footer></footer>
+  <script src="js/site-data.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/scroll-reveal.js"></script>
+  <script src="js/counter.js"></script>
+  <script src="js/accordion.js"></script>
+  <script src="js/marquee.js"></script>
+  <script src="js/page-transition.js"></script>
+  <script src="js/hero-parallax.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/projects-strip.js"></script>
+  <script src="js/init.js"></script></body>
+</html>

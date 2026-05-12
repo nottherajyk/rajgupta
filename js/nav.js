@@ -104,11 +104,11 @@
       '    <div class="footer-links">' + buildFooterLinks(window.SiteData.nav, 'label') + '</div>',
       '  </div>',
       '  <div class="footer-column">',
-      '    <span class="footer-heading">Projects (04)</span>',
+      '    <span class="footer-heading">Projects (' + String(window.SiteData.projects.length).padStart(2, '0') + ')</span>',
       '    <div class="footer-links">' + buildFooterLinks(window.SiteData.projects, 'title') + '</div>',
       '  </div>',
       '  <div class="footer-column">',
-      '    <span class="footer-heading">Journal (05)</span>',
+      '    <span class="footer-heading">Journal (' + String(window.SiteData.journals.length).padStart(2, '0') + ')</span>',
       '    <div class="footer-links">' + buildFooterLinks(window.SiteData.journals, 'title') + '</div>',
       '  </div>',
       '  <div class="footer-column">',
@@ -118,7 +118,6 @@
       '</div>',
       '<div class="container footer-bottom">',
       '  <span>&copy;' + window.SiteData.year + ' ' + window.SiteData.name + '. All rights reserved.</span>',
-      '  <span>Built with HTML, CSS &amp; JS</span>',
       '</div>'
     ].join('');
   }

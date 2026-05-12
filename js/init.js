@@ -1,4 +1,4 @@
-﻿/**
+/**
  * init.js
  * Renders shared repeated sections from the site data and initializes all interactive modules.
  */
@@ -77,6 +77,7 @@
     const placeholderClass = project.id === 'next' ? ' project-card--placeholder' : '';
     const detailLink = project.detailHref ? '<a class="text-link" href="' + project.detailHref + '" data-transition="true">Explore More</a>' : '<span class="text-link" aria-hidden="true">Explore More</span>';
     const githubLink = project.github && project.github !== '#' ? '<a class="project-card__github" href="' + project.github + '" target="_blank" rel="noreferrer">GitHub</a>' : '<span class="project-card__github" aria-disabled="true">Coming Soon</span>';
+    const websiteLink = project.website ? '<a class="project-card__github" href="' + project.website + '" target="_blank" rel="noreferrer">Live Site</a>' : '';
     const tags = project.tags.map(function buildTag(tag) {
       return '<span class="pill">' + tag + '</span>';
     }).join('');
@@ -93,7 +94,7 @@
       '    <p class="project-card__description">' + project.description + '</p>',
       '    <div class="project-card__footer">',
       '      <div class="meta-list">' + tags + '</div>',
-      '      <div class="project-card__actions">' + detailLink + githubLink + '</div>',
+      '      <div class="project-card__actions">' + detailLink + githubLink + websiteLink + '</div>',
       '    </div>',
       '  </div>',
       '</article>'

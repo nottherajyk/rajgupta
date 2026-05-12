@@ -38,6 +38,7 @@
         description: 'Stop switching between ten websites to get one job done. A single, high-performance web app for your essential digital utilities.',
         tags: ['JavaScript', 'Utilities', 'Web'],
         github: 'https://github.com/nottherajyk/SnapTools_V1',
+        website: 'https://snap-tools-aiot.vercel.app/',
         layout: 'wide'
       },
       {
@@ -51,6 +52,7 @@
         description: 'Real-time American Sign Language detection and translation web app. Uses MediaPipe 3D hand landmarks to translate ASL signs into text instantly.',
         tags: ['React', 'MediaPipe', 'JavaScript'],
         github: 'https://github.com/nottherajyk/SilentVoice.ai',
+        website: 'https://silentvoice-ai.vercel.app/',
         layout: 'half'
       },
       {
@@ -77,6 +79,7 @@
         description: 'Gymnasium RL environment for AI-powered customer support triage. Built for the Meta PyTorch Hackathon under the OpenEnv spec.',
         tags: ['Python', 'AI', 'RL'],
         github: 'https://github.com/nottherajyk/HelixDesk-AI-Agent',
+        website: 'https://huggingface.co/spaces/nottherajyk/helixdesk-openenv',
         layout: 'wide'
       },
       {
@@ -129,7 +132,21 @@
         description: 'Comprehensive health tracking and AI nutrition logging. Built using TypeScript, Next.js, and Gemini AI for the Google AI Hackathon.',
         tags: ['TypeScript', 'Next.js', 'Gemini AI'],
         github: 'https://github.com/nottherajyk/Vitality-AI-Health-Copilot',
+        website: 'https://vitalityai-xi.vercel.app',
         layout: 'wide'
+      },
+      {
+        id: 'sketch-air',
+        category: 'Web App',
+        title: 'Sketch Air',
+        footerTitle: 'Sketch Air',
+        image: 'assets/skair project.png',
+        previewHref: 'projects.html#sketch-air',
+        description: 'Web-based air-drawing application with real-time hand and pen tracking.',
+        tags: ['JavaScript', 'MediaPipe', 'Web'],
+        github: 'https://github.com/nottherajyk/Sketch-Air',
+        website: 'https://sketch-air-one.vercel.app/',
+        layout: 'half'
       }
     ],
     journals: [
@@ -139,7 +156,7 @@
         title: 'What I learned from 30+ AI certifications in one year',
         footerTitle: 'AI Certifications',
         image: 'assets/journal-1.avif',
-        href: 'journal-detail.html#ai-certifications'
+        href: 'journal-detail-ai-certifications.html'
       },
       {
         slug: 'snaptools-retrospective',
@@ -147,7 +164,7 @@
         title: "Why I built SnapTools and what I'd do differently",
         footerTitle: 'SnapTools Retrospective',
         image: 'assets/journal-2.avif',
-        href: 'journal-detail.html#snaptools-retrospective'
+        href: 'journal-detail-snaptools-retrospective.html'
       },
       {
         slug: 'filmmaker-programmer',
@@ -155,7 +172,7 @@
         title: 'On being a filmmaker and a programmer at the same time',
         footerTitle: 'Filmmaker + Programmer',
         image: 'assets/journal-3.avif',
-        href: 'journal-detail.html#filmmaker-programmer'
+        href: 'journal-detail-filmmaker-programmer.html'
       },
 
     ],
