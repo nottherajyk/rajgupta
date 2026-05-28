@@ -1,4 +1,4 @@
-﻿/**
+/**
  * projects-strip.js
  * Adds desktop drag-to-scroll behavior to the homepage project strip.
  */
@@ -72,6 +72,28 @@
     strips.forEach(function initializeStrip(strip) {
       bindStrip(strip);
     });
+
+    // Scroll arrow behavior
+    var arrow = document.querySelector('.strip-scroll-arrow');
+    var strip = document.getElementById('home-project-strip');
+    if (arrow && strip) {
+      arrow.addEventListener('click', function handleArrowClick() {
+        strip.scrollBy({ left: 340, behavior: 'smooth' });
+      });
+
+      function checkScrollEnd() {
+        var atEnd = strip.scrollLeft + strip.clientWidth >= strip.scrollWidth - 20;
+        if (atEnd) {
+          arrow.classList.add('hidden');
+        } else {
+          arrow.classList.remove('hidden');
+        }
+      }
+
+      strip.addEventListener('scroll', checkScrollEnd);
+      // Initial check after content renders
+      setTimeout(checkScrollEnd, 500);
+    }
   }
 
   window.ProjectsStrip = {

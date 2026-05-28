@@ -1,4 +1,4 @@
-﻿/* ============ SECTIONS.CSS ============ */
+/* ============ SECTIONS.CSS ============ */
 
 /* --- Homepage Projects Strip --- */
 .projects-strip {
@@ -18,6 +18,48 @@
 
 .projects-strip.dragging {
   cursor: grabbing;
+}
+
+/* --- Strip Scroll Arrow --- */
+.projects-strip-wrapper {
+  position: relative;
+}
+
+.strip-scroll-arrow {
+  position: absolute;
+  right: clamp(16px, 3vw, 32px);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: background 0.3s ease, border-color 0.3s ease, opacity 0.4s ease;
+  animation: pulseArrow 2.4s ease-in-out infinite;
+}
+
+.strip-scroll-arrow:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.strip-scroll-arrow.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes pulseArrow {
+  0%, 100% { transform: translateY(-50%) translateX(0); }
+  50% { transform: translateY(-50%) translateX(6px); }
 }
 
 .project-preview-card {
