@@ -37,7 +37,7 @@
         description: 'AI spend audit tool for startups. Instantly scans your team\'s subscriptions across Claude, ChatGPT, Cursor, and more to surface redundancy and savings.',
         tags: ['Next.js', 'TypeScript', 'Supabase'],
         github: 'https://github.com/nottherajyk/spendlens',
-        website: 'https://spendlens.vercel.app',
+        website: 'https://spendlens-credex.vercel.app/',
         layout: 'wide'
       },
       {
