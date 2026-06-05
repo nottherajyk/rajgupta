@@ -20,7 +20,7 @@
       { label: 'Links', href: 'links.html', page: 'links' }
     ],
     socials: [
-      { label: 'GitHub', href: 'https://github.com/jeeka1469' },
+      { label: 'GitHub', href: 'https://github.com/nottherajyk' },
       { label: 'LinkedIn', href: 'https://linkedin.com/in/raj-gupta-a7bb77348' },
       { label: 'Instagram', href: 'https://instagram.com/nottherajyk' },
       { label: 'YouTube', href: 'https://youtube.com/@nottherajyk' },
