@@ -276,9 +276,21 @@
         linkLabel: "View Text Cleaner web app"
       },
       {
+        role: "Business Development Intern",
+        organization: "She Can Foundation",
+        duration: "May 2026",
+        description: [
+          "Assisted partnership and outreach initiatives.",
+          "Supported communication and research efforts."
+        ],
+        skills: ["Research", "Communication", "Business Development"],
+        link: "about.html",
+        linkLabel: "View outreach achievements"
+      },
+      {
         role: "Sub Core Team Member",
         organization: "Google Developer Group on Campus MPSTME Shirpur",
-        duration: "Nov 2025 – Jun 2026",
+        duration: "Nov 2025 – June 2026",
         description: [
           "Organized technology-focused events.",
           "Coordinated workshops and developer programs.",
@@ -305,7 +317,7 @@
       {
         role: "Cinematographer",
         organization: "RAW Vision Media",
-        duration: "Jul 2025 – Present",
+        duration: "Jul 2025 – June 2026",
         description: [
           "Worked on promotional videos and event films.",
           "Contributed to content exceeding 120K+ views.",
@@ -314,18 +326,6 @@
         skills: ["DaVinci Resolve", "Video Editing", "Storytelling", "Cinematography"],
         link: "about.html",
         linkLabel: "View creative media work"
-      },
-      {
-        role: "Business Development Intern",
-        organization: "She Can Foundation",
-        duration: "May 2026",
-        description: [
-          "Assisted partnership and outreach initiatives.",
-          "Supported communication and research efforts."
-        ],
-        skills: ["Research", "Communication", "Business Development"],
-        link: "about.html",
-        linkLabel: "View outreach achievements"
       },
       {
         role: "Campus Ambassador",
