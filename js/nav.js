@@ -96,6 +96,7 @@
       '  <div class="footer-feature">',
       '    <span class="eyebrow">Stay connected.</span>',
       '    <a class="footer-email inline-link" href="mailto:' + window.SiteData.email + '">' + window.SiteData.email + '</a>',
+      '    <p class="micro-copy">' + window.SiteData.handle + '</p>',
       '    <p>' + window.SiteData.tagline + '</p>',
       '    <p class="micro-copy">' + window.SiteData.attribution + '</p>',
       '  </div>',

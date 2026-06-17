@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Happened with Claude Fable 5? | Raj Gupta</title>
+  <meta name="description"
+    content="Raj Gupta on the Claude Fable 5 and Mythos 5 suspension — what it means for AI builders when model access changes overnight due to export controls and policy shifts.">
+  <meta name="keywords"
+    content="Claude Fable 5, Claude Mythos 5, Anthropic, Raj Gupta, nottherajyk, AI policy, export controls, model access, AI engineering">
+  <meta name="author" content="Raj Gupta">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="canonical" href="https://rajgupta-home.vercel.app/journal-detail-claude-fable-mythos.html">
+  <link rel="icon" type="image/png" href="assets/icon.png">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Raj Gupta Portfolio">
+  <meta property="og:title" content="What Happened with Claude Fable 5 and Claude Mythos 5 | Raj Gupta">
+  <meta property="og:description"
+    content="What the Claude Fable 5 suspension means for AI builders when model access changes overnight.">
+  <meta property="og:url" content="https://rajgupta-home.vercel.app/journal-detail-claude-fable-mythos.html">
+  <meta property="og:image" content="https://rajgupta-home.vercel.app/assets/Fable%205.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@nottherajyk">
+  <meta name="twitter:title" content="What Happened with Claude Fable 5 and Claude Mythos 5 | Raj Gupta">
+  <meta name="twitter:description"
+    content="What the Claude Fable 5 suspension means for AI builders when model access changes overnight.">
+  <meta name="twitter:image" content="https://rajgupta-home.vercel.app/assets/Fable%205.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/projects.css">
+  <link rel="stylesheet" href="css/journal.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/cursor.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body data-page="journal">
+  <div id="pt-overlay"></div>
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+  <header class="site-header" data-site-nav></header>
+  <main>
+    <section id="journal-detail-hero" class="hero hero--short">
+      <div class="hero-bg">
+        <img src="assets/Fable%205.jpg"
+          alt="Claude Fable 5 and Mythos 5 — AI model access and export controls" data-parallax-speed="0.35">
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content reveal">
+        <div class="article-hero-meta">
+          <span>AI Policy</span>
+          <span>Journal</span>
+          <span>June 2026</span>
+        </div>
+        <h1 class="hero-title hero-title--page">What Happened with Claude Fable 5?</h1>
+        <p class="hero-body">When model access changes overnight — what the Fable 5 suspension means for builders,
+          reliability, and the future of AI distribution.</p>
+      </div>
+    </section>
+
+    <section id="journal-detail" class="section">
+      <div class="container article-layout">
+        <article class="article-body reveal">
+          <p>This week, Anthropic introduced two configurations of its next major model family: Claude Fable 5.
+            According to Anthropic's documentation, Fable 5 was made generally available, while Mythos 5 was offered in
+            limited availability to approved customers under Project Glasswing. Anthropic later updated its docs to say
+            access to both models was suspended on June 12.</p>
+
+          <h2>Why it matters</h2>
+          <p>What stood out to me was not just the model release itself, but the reaction around it. Recent reporting
+            says the suspension followed a U.S. government export-control directive affecting foreign access, with
+            concerns tied to national security and dual-use capabilities. In practice, that turned a product launch into
+            a broader conversation about how advanced AI systems are distributed, controlled, and governed.</p>
+
+          <h2>What builders should take away</h2>
+          <p>For builders like me, the lesson is straightforward: model access can change suddenly, so systems should
+            not depend on a single provider or a single model. Good engineering means keeping fallback paths,
+            documenting work clearly, and designing workflows that survive a model swap without breaking the entire
+            product.</p>
+
+          <blockquote class="article-quote">The future of AI is not only about capability. It is also about access,
+            policy, reliability, and how quickly the ecosystem can adapt when the rules change.</blockquote>
+
+          <h2>Building for resilience</h2>
+          <p>My takeaway is simple. If you are building products on top of frontier models, you need to plan for the
+            possibility that your primary model disappears tomorrow. That means abstraction layers between your
+            application logic and the model API, graceful degradation when a provider goes offline, and clear
+            documentation so your team can swap providers without reverse-engineering the codebase.</p>
+
+          <p>This is not pessimism. It is just good architecture. The same principles that make distributed systems
+            reliable — redundancy, loose coupling, clear interfaces — apply directly to AI-powered products. The Fable 5
+            situation is a reminder that the policy layer is now as important as the technical layer.</p>
+        </article>
+        <aside class="article-aside reveal">
+          <section class="project-detail__panel surface-card">
+            <h3>Key Points</h3>
+            <div class="project-detail__list muted">
+              <p>Claude Fable 5 launched and was suspended within days.</p>
+              <p>Export controls affected model distribution globally.</p>
+              <p>Builders should design for multi-provider resilience.</p>
+            </div>
+          </section>
+          <section class="project-detail__panel surface-card">
+            <h3>Next Reads</h3>
+            <div class="project-detail__list">
+              <a class="inline-link" href="journal-detail-ai-certifications.html" data-transition="true">AI
+                Certifications</a>
+              <a class="inline-link" href="journal.html" data-transition="true">Back to Journal</a>
+              <a class="inline-link" href="contact.html" data-transition="true">Connect</a>
+            </div>
+          </section>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer" data-site-footer></footer>
+  <script src="js/site-data.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/scroll-reveal.js"></script>
+  <script src="js/counter.js"></script>
+  <script src="js/accordion.js"></script>
+  <script src="js/marquee.js"></script>
+  <script src="js/page-transition.js"></script>
+  <script src="js/hero-parallax.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/projects-strip.js"></script>
+  <script src="js/init.js"></script>
+</body>
+
+</html>
