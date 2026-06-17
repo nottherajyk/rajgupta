@@ -107,6 +107,48 @@
     }).join('');
   }
 
+  function buildExperienceTimelineCard(exp, index) {
+    const alignClass = index % 2 === 0 ? 'timeline-item--left' : 'timeline-item--right';
+    const skillsHtml = exp.skills.map(function buildSkill(skill) {
+      return '<span class="pill">' + skill + '</span>';
+    }).join('');
+
+    const descHtml = exp.description.map(function buildDescItem(desc) {
+      return '<li>' + desc + '</li>';
+    }).join('');
+
+    const linkHtml = exp.link ? '<a class="timeline-card-link" href="' + exp.link + '" data-transition="true">' + exp.linkLabel + '</a>' : '';
+
+    return [
+      '<div class="timeline-item ' + alignClass + ' reveal">',
+      '  <div class="timeline-dot"></div>',
+      '  <div class="timeline-card">',
+      '    <div class="timeline-card-meta">',
+      '      <span class="timeline-card-duration">' + exp.duration + '</span>',
+      '      <h3>' + exp.role + '</h3>',
+      '      <span class="timeline-card-org">' + exp.organization + '</span>',
+      '    </div>',
+      '    <ul class="timeline-card-desc">' + descHtml + '</ul>',
+      '    <div class="timeline-skills-list">' + skillsHtml + '</div>',
+      linkHtml ? '    <div style="margin-top: 8px;">' + linkHtml + '</div>' : '',
+      '  </div>',
+      '</div>'
+    ].join('');
+  }
+
+  function buildExperiencePreviewRow(exp) {
+    let orgName = exp.organization;
+    if (orgName.includes('Google Developer Group')) {
+      orgName = 'GDG on Campus';
+    }
+    return [
+      '<div class="experience-preview-item reveal">',
+      '  <span class="experience-preview-role">' + exp.role + '</span>',
+      '  <span class="experience-preview-org">' + orgName + '</span>',
+      '</div>'
+    ].join('');
+  }
+
   function renderHomeProjects() {
     const mount = document.getElementById('home-project-strip');
     if (!mount) {
@@ -175,6 +217,23 @@
     }
   }
 
+  function renderExperiences() {
+    const timelineMount = document.getElementById('experience-timeline');
+    if (timelineMount) {
+      timelineMount.innerHTML = window.SiteData.experiences.map(function renderExp(exp, index) {
+        return buildExperienceTimelineCard(exp, index);
+      }).join('');
+    }
+
+    const previewMount = document.getElementById('experience-preview-list');
+    if (previewMount) {
+      // Preview only the first 3 experiences (FlyRank, InAmigos, GDG)
+      previewMount.innerHTML = window.SiteData.experiences.slice(0, 3).map(function renderPrevExp(exp) {
+        return buildExperiencePreviewRow(exp);
+      }).join('');
+    }
+  }
+
   function renderDynamicSections() {
     renderHomeProjects();
     renderAccordion();
@@ -184,6 +243,7 @@
     renderProjectsGrid();
     renderRoles();
     renderMarquee();
+    renderExperiences();
   }
 
   function initializeModule(moduleRef) {

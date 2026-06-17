@@ -15,6 +15,7 @@
       { label: 'Home', href: 'index.html', page: 'home' },
       { label: 'About', href: 'about.html', page: 'about' },
       { label: 'Projects', href: 'projects.html', page: 'projects' },
+      { label: 'Experience', href: 'experience.html', page: 'experience' },
       { label: 'Journal', href: 'journal.html', page: 'journal' },
       { label: 'Contact', href: 'contact.html', page: 'contact' },
       { label: 'Links', href: 'links.html', page: 'links' }
@@ -246,6 +247,98 @@
         image: 'assets/gdg1.jpg'
       },
 
+    ],
+    experiences: [
+      {
+        role: "Machine Learning Intern",
+        organization: "FlyRank AI",
+        duration: "June 2026 – Present",
+        description: [
+          "Working on Machine Learning systems and AI-powered workflows.",
+          "Exploring production AI applications and model-driven products.",
+          "Collaborating on real-world AI solutions and experimentation."
+        ],
+        skills: ["Python", "Machine Learning", "AI Systems", "Data Processing"],
+        link: "projects.html#spendlens",
+        linkLabel: "View SpendLens & HelixDesk projects"
+      },
+      {
+        role: "Web Developer",
+        organization: "InAmigos Foundation",
+        duration: "May 2026 – June 2026",
+        description: [
+          "Improved website usability and user experience.",
+          "Evaluated existing platform architecture.",
+          "Proposed enhancements for accessibility and engagement."
+        ],
+        skills: ["Web Development", "UI/UX", "Frontend Development", "Accessibility"],
+        link: "project-detail-text-cleaner.html",
+        linkLabel: "View Text Cleaner web app"
+      },
+      {
+        role: "Sub Core Team Member",
+        organization: "Google Developer Group on Campus MPSTME Shirpur",
+        duration: "Nov 2025 – Jun 2026",
+        description: [
+          "Organized technology-focused events.",
+          "Coordinated workshops and developer programs.",
+          "Collaborated with student leaders and industry speakers.",
+          "Helped strengthen campus developer communities."
+        ],
+        skills: ["Leadership", "Event Management", "Community Building", "Developer Relations"],
+        link: "about.html",
+        linkLabel: "View community activities on About page"
+      },
+      {
+        role: "Creative Intern",
+        organization: "Google Developer Group on Campus MPSTME Shirpur",
+        duration: "Oct 2025 – Nov 2025",
+        description: [
+          "Designed event creatives.",
+          "Created promotional assets.",
+          "Supported community engagement campaigns."
+        ],
+        skills: ["Design", "Content Creation", "Branding", "Marketing"],
+        link: "about.html",
+        linkLabel: "View GDG graphic design work"
+      },
+      {
+        role: "Cinematographer",
+        organization: "RAW Vision Media",
+        duration: "Jul 2025 – Present",
+        description: [
+          "Worked on promotional videos and event films.",
+          "Contributed to content exceeding 120K+ views.",
+          "Produced, edited, and color-graded visual content."
+        ],
+        skills: ["DaVinci Resolve", "Video Editing", "Storytelling", "Cinematography"],
+        link: "about.html",
+        linkLabel: "View creative media work"
+      },
+      {
+        role: "Business Development Intern",
+        organization: "She Can Foundation",
+        duration: "May 2026",
+        description: [
+          "Assisted partnership and outreach initiatives.",
+          "Supported communication and research efforts."
+        ],
+        skills: ["Research", "Communication", "Business Development"],
+        link: "about.html",
+        linkLabel: "View outreach achievements"
+      },
+      {
+        role: "Campus Ambassador",
+        organization: "Techfest IIT Bombay",
+        duration: "Jul 2025 – Dec 2025",
+        description: [
+          "Represented Techfest on campus.",
+          "Promoted participation in national technology events."
+        ],
+        skills: ["Outreach", "Community Engagement", "Event Promotion"],
+        link: "about.html",
+        linkLabel: "View campus ambassador roles"
+      }
     ],
     certifications: {
       rowOne: [
