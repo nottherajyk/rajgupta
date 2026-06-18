@@ -165,6 +165,14 @@
     ],
     journals: [
       {
+        slug: 'claude-code-expertise',
+        category: 'AI Coding Agents',
+        title: 'Claude Code and the Return of Domain Expertise',
+        footerTitle: 'Claude Code & Domain Expertise',
+        image: 'assets/Claude 1.png',
+        href: 'journal-detail-claude-code-expertise.html'
+      },
+      {
         slug: 'claude-fable-mythos',
         category: 'AI Policy',
         title: 'What happened with Claude Fable 5 and Claude Mythos 5',
