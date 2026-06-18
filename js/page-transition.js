@@ -1,4 +1,4 @@
-﻿/**
+/**
  * page-transition.js
  * Reveals the current page on load and fades to the transition overlay before internal navigation.
  */
@@ -64,6 +64,12 @@
 
     window.setTimeout(revealPage, 40);
     document.addEventListener('click', handleDocumentClick);
+
+    // Reset transition state and hide overlay when navigating back in history (bfcache)
+    window.addEventListener('pageshow', function (event) {
+      isTransitioning = false;
+      revealPage();
+    });
   }
 
   window.PageTransition = {
