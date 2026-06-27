@@ -328,7 +328,7 @@
         duration: "Jul 2025 – June 2026",
         description: [
           "Worked on promotional videos and event films.",
-          "Contributed to content exceeding 120K+ views.",
+          "Contributed to content exceeding 250K+ views.",
           "Produced, edited, and color-graded visual content."
         ],
         skills: ["DaVinci Resolve", "Video Editing", "Storytelling", "Cinematography"],
