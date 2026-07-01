@@ -300,6 +300,7 @@
 .link-button:nth-child(4) { animation-delay: 0.54s; }
 .link-button:nth-child(5) { animation-delay: 0.62s; }
 .link-button:nth-child(6) { animation-delay: 0.70s; }
+.link-button:nth-child(7) { animation-delay: 0.78s; }
 
 /* --- Mobile Responsive --- */
 @media (max-width: 480px) {

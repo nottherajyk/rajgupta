@@ -25,7 +25,8 @@
       { label: 'LinkedIn', href: 'https://linkedin.com/in/raj-gupta-a7bb77348' },
       { label: 'Instagram', href: 'https://instagram.com/nottherajyk' },
       { label: 'YouTube', href: 'https://youtube.com/@nottherajyk' },
-      { label: 'X', href: 'https://x.com/nottherajyk' }
+      { label: 'X', href: 'https://x.com/nottherajyk' },
+      { label: 'Pinterest', href: 'https://pinterest.com/nottherajyk' }
     ],
     projects: [
       {
