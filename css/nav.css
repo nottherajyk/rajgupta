@@ -58,7 +58,14 @@
   font-size: var(--text-nav);
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  opacity: 0.55;
+  opacity: 0.6;
+  display: inline-block;
+  transition:
+    transform 0.35s var(--ease-out),
+    color 0.35s ease,
+    opacity 0.35s ease,
+    text-shadow 0.35s ease,
+    filter 0.35s ease;
 }
 
 .nav-link::after,
@@ -73,8 +80,8 @@
   height: 1px;
   background: currentColor;
   transform: scaleX(0);
-  transform-origin: left center;
-  transition: transform var(--duration-base) var(--ease-smooth);
+  transform-origin: center;
+  transition: transform 0.35s var(--ease-out), box-shadow 0.35s ease;
 }
 
 .nav-link:hover,
@@ -83,6 +90,9 @@
 .menu-trigger:focus-visible,
 .nav-link.is-active {
   opacity: 1;
+  color: #ffffff;
+  transform: translateY(-2px) scale(1.06);
+  text-shadow: 0 0 16px rgba(255, 255, 255, 0.45);
 }
 
 .nav-link:hover::after,
@@ -95,6 +105,13 @@
 .inline-link:hover::after,
 .inline-link:focus-visible::after {
   transform: scaleX(1);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+/* Sibling focus dimming for primary navbar */
+.nav-links:has(.nav-link:hover) .nav-link:not(:hover) {
+  opacity: 0.3;
+  transform: scale(0.96);
 }
 
 .nav-actions {

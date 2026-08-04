@@ -71,6 +71,13 @@
   scroll-snap-align: start;
   flex-shrink: 0;
   isolation: isolate;
+  border: 1px solid var(--color-border);
+  transition:
+    transform 0.4s var(--ease-out),
+    border-color 0.4s ease,
+    box-shadow 0.4s ease,
+    opacity 0.4s ease,
+    filter 0.4s ease;
 }
 
 .project-preview-card__media,
@@ -91,9 +98,28 @@
   background: linear-gradient(to top, rgba(0, 0, 0, 0.82) 0%, rgba(0, 0, 0, 0) 58%);
 }
 
+.project-preview-card:hover,
+.project-preview-card:focus-within {
+  transform: translateY(-8px) scale(1.02);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6), 0 0 24px rgba(255, 255, 255, 0.08);
+}
+
 .project-preview-card:hover .project-preview-card__media img,
 .project-preview-card:focus-within .project-preview-card__media img {
-  transform: scale(1.03);
+  transform: scale(1.06);
+}
+
+.project-preview-card:hover .project-preview-card__title {
+  color: #ffffff;
+  text-shadow: 0 0 16px rgba(255, 255, 255, 0.4);
+}
+
+/* Sibling focus dimming across strip */
+.projects-strip:has(.project-preview-card:hover) .project-preview-card:not(:hover) {
+  opacity: 0.5;
+  transform: scale(0.97);
+  filter: blur(0.5px);
 }
 
 .project-preview-card__content {
@@ -112,6 +138,7 @@
   font-size: 24px;
   font-style: italic;
   line-height: 1.05;
+  transition: color 0.35s ease, text-shadow 0.35s ease;
 }
 
 .project-preview-card__cta {

@@ -1,4 +1,4 @@
-﻿/* ============ JOURNAL.CSS ============ */
+/* ============ JOURNAL.CSS ============ */
 
 /* --- Journal Cards --- */
 .journal-grid {
@@ -11,12 +11,18 @@
   display: grid;
   gap: 16px;
   transform: translateY(0);
+  transition:
+    transform 0.4s var(--ease-out),
+    opacity 0.4s ease,
+    filter 0.4s ease;
 }
 
 .journal-card__media {
   overflow: hidden;
   border-radius: var(--radius-sm);
   aspect-ratio: 16 / 10;
+  border: 1px solid var(--color-border);
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
 .journal-card__media img {
@@ -24,8 +30,8 @@
   height: 100%;
   object-fit: cover;
   transition:
-    transform 0.35s ease,
-    filter 0.35s ease;
+    transform 0.5s var(--ease-smooth),
+    filter 0.5s ease;
 }
 
 .journal-card__title {
@@ -33,6 +39,7 @@
   width: fit-content;
   font-size: 18px;
   line-height: 1.4;
+  transition: color 0.35s ease, text-shadow 0.35s ease;
 }
 
 .journal-card__title::after {
@@ -44,24 +51,44 @@
   height: 1px;
   background: currentColor;
   transform: scaleX(0);
-  transform-origin: left center;
-  transition: transform var(--duration-base) var(--ease-smooth);
+  transform-origin: center;
+  transition: transform 0.35s var(--ease-out), box-shadow 0.35s ease;
 }
 
 .journal-card:hover,
 .journal-card:focus-within {
-  transform: translateY(-6px);
+  transform: translateY(-8px) scale(1.02);
+}
+
+.journal-card:hover .journal-card__media,
+.journal-card:focus-within .journal-card__media {
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.08);
 }
 
 .journal-card:hover .journal-card__media img,
 .journal-card:focus-within .journal-card__media img {
-  transform: scale(1.02);
-  filter: brightness(0.85);
+  transform: scale(1.06);
+  filter: brightness(1.05);
+}
+
+.journal-card:hover .journal-card__title,
+.journal-card:focus-within .journal-card__title {
+  color: #ffffff;
+  text-shadow: 0 0 16px rgba(255, 255, 255, 0.4);
 }
 
 .journal-card:hover .journal-card__title::after,
 .journal-card:focus-within .journal-card__title::after {
   transform: scaleX(1);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+/* Sibling focus dimming across journal grid */
+.journal-grid:has(.journal-card:hover) .journal-card:not(:hover) {
+  opacity: 0.5;
+  transform: scale(0.97);
+  filter: blur(0.5px);
 }
 
 /* --- Journal Detail --- */

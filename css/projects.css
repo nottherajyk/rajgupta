@@ -1,4 +1,4 @@
-﻿/* ============ PROJECTS.CSS ============ */
+/* ============ PROJECTS.CSS ============ */
 
 /* --- Projects Grid --- */
 .project-grid {
@@ -14,6 +14,13 @@
   border-radius: var(--radius-sm);
   overflow: hidden;
   isolation: isolate;
+  border: 1px solid var(--color-border);
+  transition:
+    transform 0.4s var(--ease-out),
+    border-color 0.4s ease,
+    box-shadow 0.4s ease,
+    opacity 0.4s ease,
+    filter 0.4s ease;
 }
 
 .project-card--wide {
@@ -31,9 +38,28 @@
   transition: transform 0.7s var(--ease-smooth);
 }
 
+.project-card:hover,
+.project-card:focus-within {
+  transform: translateY(-8px) scale(1.015);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 24px rgba(255, 255, 255, 0.08);
+}
+
 .project-card:hover .project-card__media img,
 .project-card:focus-within .project-card__media img {
-  transform: scale(1.03);
+  transform: scale(1.06);
+}
+
+.project-card:hover .project-card__title {
+  color: #ffffff;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+/* Sibling focus dimming across project grid */
+.project-grid:has(.project-card:hover) .project-card:not(:hover) {
+  opacity: 0.5;
+  transform: scale(0.97);
+  filter: blur(0.5px);
 }
 
 .project-card__overlay {
@@ -51,6 +77,7 @@
   font-size: clamp(28px, 4vw, 52px);
   font-style: italic;
   line-height: 0.95;
+  transition: color 0.35s ease, text-shadow 0.35s ease;
 }
 
 .project-card__description {

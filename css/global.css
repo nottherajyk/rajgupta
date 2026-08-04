@@ -173,6 +173,7 @@ img {
   font-size: var(--text-small);
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  transition: transform 0.35s var(--ease-out), color 0.35s ease, text-shadow 0.35s ease;
 }
 
 .text-link::after {
@@ -181,12 +182,20 @@ img {
   height: 1px;
   background: currentColor;
   transform-origin: left center;
-  transition: transform var(--duration-base) var(--ease-smooth);
+  transition: transform 0.35s var(--ease-smooth), box-shadow 0.35s ease;
+}
+
+.text-link:hover,
+.text-link:focus-visible {
+  color: #ffffff;
+  transform: translateY(-2px) scale(1.05);
+  text-shadow: 0 0 14px rgba(255, 255, 255, 0.4);
 }
 
 .text-link:hover::after,
 .text-link:focus-visible::after {
-  transform: scaleX(1.2);
+  transform: scaleX(1.3);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
 }
 
 .pill {
@@ -199,6 +208,18 @@ img {
   white-space: nowrap;
   color: var(--color-text-muted);
   font-size: var(--text-small);
+  transition:
+    transform 0.35s var(--ease-out),
+    border-color 0.35s ease,
+    color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.pill:hover {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3), 0 0 14px rgba(255, 255, 255, 0.12);
 }
 
 .meta-list {
