@@ -227,8 +227,8 @@
 
     const previewMount = document.getElementById('experience-preview-list');
     if (previewMount) {
-      // Preview only the first 3 experiences (FlyRank, InAmigos, GDG)
-      previewMount.innerHTML = window.SiteData.experiences.slice(0, 3).map(function renderPrevExp(exp) {
+      // Preview the 3 latest experiences (FlyRank AI, InAmigos Foundation, She Can Foundation)
+      previewMount.innerHTML = window.SiteData.experiences.slice(-3).reverse().map(function renderPrevExp(exp) {
         return buildExperiencePreviewRow(exp);
       }).join('');
     }

@@ -259,42 +259,42 @@
     ],
     experiences: [
       {
-        role: "Machine Learning Intern",
-        organization: "FlyRank AI",
-        duration: "June 2026 – Present",
+        role: "Campus Ambassador",
+        organization: "Techfest IIT Bombay",
+        duration: "Jul 2025 – Dec 2025",
         description: [
-          "Working on Machine Learning systems and AI-powered workflows.",
-          "Exploring production AI applications and model-driven products.",
-          "Collaborating on real-world AI solutions and experimentation."
+          "Represented Techfest on campus.",
+          "Promoted participation in national technology events."
         ],
-        skills: ["Python", "Machine Learning", "AI Systems", "Data Processing"],
-        link: "projects.html#spendlens",
-        linkLabel: "View SpendLens & HelixDesk projects"
-      },
-      {
-        role: "Web Developer",
-        organization: "InAmigos Foundation",
-        duration: "May 2026 – June 2026",
-        description: [
-          "Improved website usability and user experience.",
-          "Evaluated existing platform architecture.",
-          "Proposed enhancements for accessibility and engagement."
-        ],
-        skills: ["Web Development", "UI/UX", "Frontend Development", "Accessibility"],
-        link: "project-detail-text-cleaner.html",
-        linkLabel: "View Text Cleaner web app"
-      },
-      {
-        role: "Business Development Intern",
-        organization: "She Can Foundation",
-        duration: "May 2026",
-        description: [
-          "Assisted partnership and outreach initiatives.",
-          "Supported communication and research efforts."
-        ],
-        skills: ["Research", "Communication", "Business Development"],
+        skills: ["Outreach", "Community Engagement", "Event Promotion"],
         link: "about.html",
-        linkLabel: "View outreach achievements"
+        linkLabel: "View campus ambassador roles"
+      },
+      {
+        role: "Cinematographer",
+        organization: "RAW Vision Media",
+        duration: "Jul 2025 – June 2026",
+        description: [
+          "Worked on promotional videos and event films.",
+          "Contributed to content exceeding 250K+ views.",
+          "Produced, edited, and color-graded visual content."
+        ],
+        skills: ["DaVinci Resolve", "Video Editing", "Storytelling", "Cinematography"],
+        link: "about.html",
+        linkLabel: "View creative media work"
+      },
+      {
+        role: "Creative Intern",
+        organization: "Google Developer Group on Campus MPSTME Shirpur",
+        duration: "Oct 2025 – Nov 2025",
+        description: [
+          "Designed event creatives.",
+          "Created promotional assets.",
+          "Supported community engagement campaigns."
+        ],
+        skills: ["Design", "Content Creation", "Branding", "Marketing"],
+        link: "about.html",
+        linkLabel: "View GDG graphic design work"
       },
       {
         role: "Sub Core Team Member",
@@ -311,42 +311,42 @@
         linkLabel: "View community activities on About page"
       },
       {
-        role: "Creative Intern",
-        organization: "Google Developer Group on Campus MPSTME Shirpur",
-        duration: "Oct 2025 – Nov 2025",
+        role: "Business Development Intern",
+        organization: "She Can Foundation",
+        duration: "May 2026",
         description: [
-          "Designed event creatives.",
-          "Created promotional assets.",
-          "Supported community engagement campaigns."
+          "Assisted partnership and outreach initiatives.",
+          "Supported communication and research efforts."
         ],
-        skills: ["Design", "Content Creation", "Branding", "Marketing"],
+        skills: ["Research", "Communication", "Business Development"],
         link: "about.html",
-        linkLabel: "View GDG graphic design work"
+        linkLabel: "View outreach achievements"
       },
       {
-        role: "Cinematographer",
-        organization: "RAW Vision Media",
-        duration: "Jul 2025 – June 2026",
+        role: "Web Developer",
+        organization: "InAmigos Foundation",
+        duration: "May 2026 – June 2026",
         description: [
-          "Worked on promotional videos and event films.",
-          "Contributed to content exceeding 250K+ views.",
-          "Produced, edited, and color-graded visual content."
+          "Improved website usability and user experience.",
+          "Evaluated existing platform architecture.",
+          "Proposed enhancements for accessibility and engagement."
         ],
-        skills: ["DaVinci Resolve", "Video Editing", "Storytelling", "Cinematography"],
-        link: "about.html",
-        linkLabel: "View creative media work"
+        skills: ["Web Development", "UI/UX", "Frontend Development", "Accessibility"],
+        link: "project-detail-text-cleaner.html",
+        linkLabel: "View Text Cleaner web app"
       },
       {
-        role: "Campus Ambassador",
-        organization: "Techfest IIT Bombay",
-        duration: "Jul 2025 – Dec 2025",
+        role: "Machine Learning Intern",
+        organization: "FlyRank AI",
+        duration: "June 2026 – Present",
         description: [
-          "Represented Techfest on campus.",
-          "Promoted participation in national technology events."
+          "Working on Machine Learning systems and AI-powered workflows.",
+          "Exploring production AI applications and model-driven products.",
+          "Collaborating on real-world AI solutions and experimentation."
         ],
-        skills: ["Outreach", "Community Engagement", "Event Promotion"],
-        link: "about.html",
-        linkLabel: "View campus ambassador roles"
+        skills: ["Python", "Machine Learning", "AI Systems", "Data Processing"],
+        link: "projects.html#spendlens",
+        linkLabel: "View SpendLens & HelixDesk projects"
       }
     ],
     certifications: {
