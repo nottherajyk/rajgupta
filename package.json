@@ -1,0 +1,24 @@
+{
+  "name": "portfolio-3",
+  "version": "1.0.0",
+  "description": "My Portfolio website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nottherajyk/rajgupta.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/nottherajyk/rajgupta/issues"
+  },
+  "homepage": "https://github.com/nottherajyk/rajgupta#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}

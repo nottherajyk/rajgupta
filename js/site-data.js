@@ -9,7 +9,7 @@
     watermark: 'Keep moving forward...',
     handle: '@nottherajyk',
     email: 'rajgupta.yk@gmail.com',
-    tagline: "Building production-grade web apps and AI systems that solve real problems.",
+    tagline: "Building production grade web apps and AI systems that solve real problems.",
     attribution: 'Made with curiosity by Raj Gupta.',
     nav: [
       { label: 'Home', href: 'index.html', page: 'home' },

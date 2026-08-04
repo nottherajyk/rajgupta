@@ -252,7 +252,17 @@
     }
   }
 
+  function initVercelAnalytics() {
+    if (!document.querySelector('script[src*="/_vercel/insights/script.js"]')) {
+      const script = document.createElement('script');
+      script.src = '/_vercel/insights/script.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    }
+  }
+
   function initSite() {
+    initVercelAnalytics();
     initializeModule(window.SiteChrome);
     renderDynamicSections();
     initializeModule(window.PageTransition);
