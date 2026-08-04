@@ -265,6 +265,7 @@
     initVercelAnalytics();
     initializeModule(window.SiteChrome);
     renderDynamicSections();
+    initializeModule(window.TimelineTracker);
     initializeModule(window.PageTransition);
     initializeModule(window.ScrollReveal);
     initializeModule(window.CounterAnimation);
