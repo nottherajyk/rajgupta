@@ -360,12 +360,10 @@
         'JPMorganChase'
       ],
       rowTwo: [
-        'Anthrophic',
-        'AWS',
         'Rolls Royce Financial Analyst',
         'Generative AI',
         'Claude Subagents',
-        'SKILLS BOOST ARCADE LEVEL 3 Badge ',
+        'Google Cloud Arcade Level 3',
         'Claude Cowork',
         'Claude Code',
         'AI Agents'
