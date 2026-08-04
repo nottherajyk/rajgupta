@@ -35,7 +35,7 @@
   }
 
   function validateFields() {
-    const requiredFields = Array.prototype.slice.call(form.querySelectorAll('[data-required="true"]'));
+    const requiredFields = form.querySelectorAll('[data-required="true"]');
     let isValid = true;
 
     requiredFields.forEach(function validateField(field) {

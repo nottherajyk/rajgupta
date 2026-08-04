@@ -27,7 +27,7 @@
     container.appendChild(pointerOrb);
 
     const tagEl = pointerOrb.querySelector('[data-pointer-tag]');
-    const items = Array.prototype.slice.call(container.querySelectorAll('.timeline-item'));
+    const items = container.querySelectorAll('.timeline-item');
 
     if (!items.length) {
       return;
@@ -71,7 +71,6 @@
       items.forEach(function (item, idx) {
         const itemRect = item.getBoundingClientRect();
         const itemTopRel = itemRect.top - rect.top;
-        const itemCenterRel = itemTopRel + (itemRect.height / 2);
 
         // Highlight stage if pointer has reached the card top or center
         if (pointerPx >= (itemTopRel - 50)) {
@@ -109,7 +108,7 @@
   }
 
   function init() {
-    const containers = Array.prototype.slice.call(document.querySelectorAll('.timeline-container'));
+    const containers = document.querySelectorAll('.timeline-container');
     containers.forEach(function (container) {
       initTimelineContainer(container);
     });

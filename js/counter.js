@@ -1,4 +1,4 @@
-﻿/**
+/**
  * counter.js
  * Animates stat numbers from zero to their target values once they enter the viewport.
  */
@@ -47,7 +47,7 @@
   }
 
   function init() {
-    const counters = Array.prototype.slice.call(document.querySelectorAll('.stat-number[data-target]'));
+    const counters = document.querySelectorAll('.stat-number[data-target]');
     if (!counters.length) {
       return;
     }
