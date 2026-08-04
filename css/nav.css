@@ -1,4 +1,4 @@
-﻿/* ============ NAV.CSS ============ */
+/* ============ NAV.CSS ============ */
 
 /* --- Shared Nav --- */
 .site-header {
@@ -157,8 +157,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 30px var(--container-x) 36px;
-  background: rgba(10, 10, 10, 0.98);
+  padding: 36px var(--container-x) 40px;
+  background: rgba(10, 10, 10, 0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   transform: translateY(-100%);
   opacity: 0;
   pointer-events: none;
@@ -177,36 +179,105 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .overlay-close {
   font-size: clamp(28px, 4vw, 48px);
   line-height: 1;
+  background: none;
+  border: none;
+  color: var(--color-text-main, #ffffff);
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.overlay-close:hover {
+  transform: rotate(90deg) scale(1.15);
+  color: #ffffff;
 }
 
 .overlay-nav {
-  display: grid;
-  place-items: center;
-  gap: 18px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  gap: 24px 44px;
   text-align: center;
   flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
 .overlay-link {
+  position: relative;
   font-family: var(--font-display);
-  font-size: clamp(36px, 7vw, 72px);
+  font-size: clamp(28px, 4.5vw, 64px);
   font-style: italic;
-  line-height: 0.95;
+  line-height: 1.1;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
   opacity: 0;
-  transform: translateY(18px);
+  transform: translateY(24px);
+  transition:
+    transform 0.4s var(--ease-out),
+    color 0.35s ease,
+    opacity 0.4s ease,
+    filter 0.4s ease,
+    letter-spacing 0.4s ease;
+}
+
+/* Hover Underline effect */
+.overlay-link::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ffffff, transparent);
+  transform: translateX(-50%);
+  transition: width 0.4s var(--ease-out);
+  border-radius: 2px;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+}
+
+/* Hover State */
+.overlay-link:hover {
+  color: #ffffff;
+  transform: translateY(-6px) scale(1.08) !important;
+  letter-spacing: 0.02em;
+  text-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+.overlay-link:hover::after {
+  width: 85%;
+}
+
+/* Focus Dim non-hovered items */
+.overlay-nav:has(.overlay-link:hover) .overlay-link:not(:hover) {
+  opacity: 0.3;
+  transform: scale(0.95);
+  filter: blur(0.8px);
 }
 
 .overlay-menu.is-open .overlay-link {
   animation: overlayLinkIn 0.6s var(--ease-out) forwards;
 }
 
+.overlay-menu.is-open .overlay-link:nth-child(1) {
+  animation-delay: 0.04s;
+}
+
 .overlay-menu.is-open .overlay-link:nth-child(2) {
-  animation-delay: 0.06s;
+  animation-delay: 0.08s;
 }
 
 .overlay-menu.is-open .overlay-link:nth-child(3) {
@@ -214,32 +285,61 @@
 }
 
 .overlay-menu.is-open .overlay-link:nth-child(4) {
-  animation-delay: 0.18s;
+  animation-delay: 0.16s;
 }
 
 .overlay-menu.is-open .overlay-link:nth-child(5) {
+  animation-delay: 0.20s;
+}
+
+.overlay-menu.is-open .overlay-link:nth-child(6) {
   animation-delay: 0.24s;
+}
+
+.overlay-menu.is-open .overlay-link:nth-child(7) {
+  animation-delay: 0.28s;
 }
 
 .overlay-socials {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 16px 20px;
+  gap: 16px 24px;
   color: var(--color-text-muted);
   font-size: var(--text-small);
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
+.overlay-social {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.overlay-social:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
 @keyframes overlayLinkIn {
   from {
     opacity: 0;
-    transform: translateY(18px);
+    transform: translateY(24px);
   }
 
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 576px) {
+  .overlay-nav {
+    gap: 12px 20px;
+    padding: 20px 10px;
+  }
+
+  .overlay-link {
+    font-size: clamp(22px, 6.5vw, 32px);
+    padding: 4px 8px;
   }
 }
