@@ -621,6 +621,22 @@
     left: 20px;
   }
 
+  .timeline-progress-line {
+    left: 20px;
+  }
+
+  .timeline-pointer-orb {
+    left: 20px;
+  }
+
+  .pointer-stage-tag {
+    left: calc(100% + 10px);
+    max-width: calc(100vw - 85px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
   .timeline-item {
     width: 100%;
     padding-left: 48px;
