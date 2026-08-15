@@ -1,4 +1,4 @@
-﻿/**
+/**
  * hero-parallax.js
  * Updates hero background translation on scroll and hides the scroll indicator after the user moves down the page.
  */
@@ -37,8 +37,8 @@
   }
 
   function init() {
-    heroImages = Array.prototype.slice.call(document.querySelectorAll('.hero-bg img'));
-    indicators = Array.prototype.slice.call(document.querySelectorAll('.scroll-indicator'));
+    heroImages = Array.from(document.querySelectorAll('.hero-bg img'));
+    indicators = Array.from(document.querySelectorAll('.scroll-indicator'));
 
     if (!heroImages.length && !indicators.length) {
       return;
