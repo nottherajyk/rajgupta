@@ -64,6 +64,10 @@
     margin-right: var(--container-x);
   }
 
+  .hero-bg img {
+    object-position: center top;
+  }
+
   .accordion-content__inner {
     grid-template-columns: 1fr;
     padding-left: 0;
@@ -163,8 +167,8 @@
     opacity: 0.8;
   }
 
-  /* Keep face visible on mobile instead of cropping to the side */
+  /* Center portrait photo on mobile */
   .hero-bg img {
-    object-position: 90% top;
+    object-position: center top;
   }
 }
